@@ -19,12 +19,19 @@
 def main():
     print("Acronym Generator")
 
-    phrase = input("Please enter a phrase: ").upper()
+    # Prompt for user input
+    phrase = input("Please enter a phrase: ")
 
+    # Split phrase into words
     wordList = phrase.split()
+    
+    # Store first letter of each word into acronym
     acronym = ""
-
     for word in wordList:
-        print(word)
+        acronym += word[0].upper()
+
+    # Display Result
+    print(f"Acronym for {phrase}")
+    print(acronym)
 
 main()

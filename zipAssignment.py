@@ -31,8 +31,12 @@ def main():
 
     STUDENT_NAME = "KnappAndrew"
 
-    assignmentNumber = input("Type name of number of the homework: ")
+    assignmentNumber = input("Type number of the homework: ")
 
-    os.system(f"tar -cf Submissions/hw{assignmentNumber}{STUDENT_NAME}.zip hw{assignmentNumber}{STUDENT_NAME}")
+    assignmentName = f"hw{assignmentNumber}{STUDENT_NAME}"
+
+    os.system(f"tar -cf Submissions/{assignmentName}.zip {assignmentName}")
+
+    print(f"{assignmentName}.zip created")
 
 main()
