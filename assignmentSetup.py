@@ -24,6 +24,7 @@ def homeworkTemplate(fileName):
 # Programmer:    Andrew Knapp
 # Date:          {datetime.now().strftime("%b %d, %Y")}
 #
+#
 # Problem Statement: 
 #
 #
