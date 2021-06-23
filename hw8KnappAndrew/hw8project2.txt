@@ -1,0 +1,55 @@
+# File Name:     hw8project2.txt
+# Programmer:    Andrew Knapp
+# Date:          Jun 22, 2021
+
+not (P or Q)
+P  |  Q  |  not (P or Q)
+0     0      1
+0     1      0
+1     0      0
+1     1      0
+
+
+P and Q or R
+P  |  Q  |  R  |  P and Q or R
+0     0     0     0
+1     0     0     0
+0     1     0     0
+1     1     0     1
+0     0     1     1
+1     0     1     1
+0     1     1     1
+1     1     1     1
+
+(not P or not Q) and not R
+P  |  Q  |  R  |  (not P or not Q) and not R
+0     0     0     1
+1     0     0     1
+0     1     0     1
+1     1     0     0
+0     0     1     0
+1     0     1     0
+0     1     1     0
+1     1     1     0
+
+
+(P and Q) or (R and S)
+P  |  Q  |  R  |  S  |  (P and Q) or (R and S)
+0     0     0     0      0
+1     0     0     0      0
+0     1     0     0      0
+1     1     0     0      1
+0     0     1     0      0
+1     0     1     0      0
+0     1     1     0      0
+1     1     1     0      1
+0     0     0     1      0
+1     0     0     1      0
+0     1     0     1      0
+1     1     0     1      1
+0     0     1     1      1
+1     0     1     1      1
+0     1     1     1      1
+1     1     1     1      1
+
+
