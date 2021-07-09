@@ -39,15 +39,24 @@ def median(values):
 
     isEven = len(values) % 2 == 0
 
+    # If number of values is even then median is the average
+    # of the middle two values
     if isEven:
         val1 = values[int((len(values) / 2) - 1)]
         val2 = values[int(len(values) / 2)]
         median = mean([val1, val2])
+    # Else the median is the middle value in the sorted list
     else:
         median = values[int(len(values) / 2)]
     
     return median
 
+# This function finds the standard deviation of a given list using the
+# formula as broken down below
+# Formula
+# dividend = ∑(num - mean)^2
+# divisor = (numValues - 1) 
+# SD = √(dividend / divisor)
 def standardDeviation(values):
     if len(values) == 0:
         raise ValueError("Cannot find standard deviaiton of empty list")
@@ -66,6 +75,9 @@ def standardDeviation(values):
 
     return (dividend / divisor) ** (1/2)
 
+# Calculates the lower and upper values of a given 
+# standard deviation range. The number of standard
+# deviations from the mean can be selected as well
 def getSDRange(mean, SD, numSDs):
     if SD < 0 or numSDs < 0:
         raise ValueError("Standard deviation and number of standard deviations must be positive")
@@ -75,6 +87,7 @@ def getSDRange(mean, SD, numSDs):
 
     return [val1, val2]
 
+# Prints the results to the console
 def displayValues(mean, median, SD, twoSDRange):
     print("Statistics")
     print(f"Mean: {mean:.2f}")
@@ -85,6 +98,9 @@ def displayValues(mean, median, SD, twoSDRange):
 def main():
     nums = []
 
+    # Read file and add numbers form file into list
+    # If file was not found catch that error, else catch any
+    # other error
     try:
         with open("./nums.txt") as file:
             for num in file:
@@ -96,12 +112,15 @@ def main():
         print("An error occured while trying to access/read the file")
         raise
 
+    # Calculate the mean, median, SD, and SD range
+    # if any of these error out will catch a Value Error
     try:
         meanValue = mean(nums)
         medianValue = median(nums) 
         SDValue = standardDeviation(nums)
         twoSDRange = getSDRange(meanValue, SDValue, 2)
     except ValueError:
+        print("An error occurred while trying to calculate the related statistics")
         raise
 
     displayValues(meanValue, medianValue, SDValue, twoSDRange)
