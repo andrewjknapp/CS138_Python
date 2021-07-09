@@ -107,10 +107,14 @@ def main():
                 nums.append(eval(num.strip()))
     except FileNotFoundError:
         print("The file requested could not be found")
-        raise
+        return
     except:
         print("An error occured while trying to access/read the file")
-        raise
+        return
+    
+    if 0 >= len(nums) or len(nums) > 1000:
+        print("List of numbers must be between 1 and 1000")
+        return
 
     # Calculate the mean, median, SD, and SD range
     # if any of these error out will catch a Value Error
@@ -119,9 +123,10 @@ def main():
         medianValue = median(nums) 
         SDValue = standardDeviation(nums)
         twoSDRange = getSDRange(meanValue, SDValue, 2)
-    except ValueError:
+    except ValueError as e:
         print("An error occurred while trying to calculate the related statistics")
-        raise
+        print(e)
+        return
 
     displayValues(meanValue, medianValue, SDValue, twoSDRange)
 
