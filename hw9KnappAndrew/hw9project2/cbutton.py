@@ -24,8 +24,8 @@ class CButton:
         "Returns true if button active and p is inside"
         dx = (p.getX() - self.center.getX())**2
         dy = (p.getY() - self.center.getY())**2
-        distance = (dx + dy)**1/2
-
+        distance = (dx + dy)**(1/2)
+        
         return (self.active and distance <= self.circ.radius)
 
     def getLabel(self):
