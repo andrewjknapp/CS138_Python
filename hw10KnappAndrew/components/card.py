@@ -84,7 +84,7 @@ class Card:
         """Set number of card if character is a valid card character
         Returns false if an invalid character is given.
         """
-        acceptableCharacters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+        acceptableCharacters = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 
         if not number in acceptableCharacters:
             return False
