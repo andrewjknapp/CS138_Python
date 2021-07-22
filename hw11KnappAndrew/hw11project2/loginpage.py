@@ -6,6 +6,7 @@ from button import Button
 class LoginPage(Page):
 
     def defineElements(self):
+        """Defines the elements that will appear on the page and adds them to the elements list"""
 
         self.createElement("title", Text(Point(self.center, 30), "Login Page"))
 
@@ -25,20 +26,27 @@ class LoginPage(Page):
             self.createElement(f"pin{x}", Button(self.parent.win, Point(*pinKeyPoints[x]), 20, 20, x, True))
 
         self.createElement("submitButton", Button(self.parent.win, Point(self.center, 250), 50, 25, "Login", True))
-        # self.submitButton = Button(self.parent.win, Point(self.center, 250), 50, 25, "Login", True)
-        # self.elements.append(self.submitButton)
+
 
     def defineClickActions(self):
+        """Defines what should happen when a button is clicked on the page"""
         # Click actions for pin buttons
         for x in range(10):
             self.clickActions.append({"button": self.__getattribute__(f"pin{x}"), "action": self.anonymous([x], self.clickPin)})
 
         self.clickActions.append({"button": self.submitButton, "action": self.handleLogin})
 
+
     def anonymous(self, args, function):
+        """Helper function to ensure a new closure is generated with each lambda function"""
         return lambda: function(*args)
 
+
     def clickPin(self, number):
+        """
+        When a numbered button is clicked that number should be appended onto the 
+        pin Entry element if that Entry element does not already have four characters
+        """
         pinLabelText = self.pinEntry.getText()
         if self.pinIsFull(pinLabelText):
             return
@@ -47,10 +55,14 @@ class LoginPage(Page):
 
         self.pinEntry.setText(pinLabelText)
 
+
     def pinIsFull(self, pinText):
+        """Returns whether or not the pin has reached its capacity"""
         return len(pinText) >= 4
 
+
     def handleLogin(self):
+        """Validates that the user has entered an id and a pin, then attempts to log them in"""
         idText = self.userIdEntry.getText().strip()
         pinText = self.pinEntry.getText().strip()
 

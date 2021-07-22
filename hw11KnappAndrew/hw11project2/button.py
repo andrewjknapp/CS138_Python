@@ -20,9 +20,7 @@ class Button:
         p2 = Point(self.xmax, self.ymax)
         self.rect = Rectangle(p1,p2)
         self.rect.setFill('lightgray')
-        #self.rect.draw(win)
         self.label = Text(center, label)
-        #self.label.draw(win)
         self.win = win
         self.isActivated = isActivated
 

@@ -6,10 +6,14 @@ from button import Button
 class Dashboard(Page):
 
     def initializeState(self):
+        """Initializes any page specific variables"""
+
         self.userInfo = self.parent.getDBData()[self.parent.loggedInUser]
-        print(self.userInfo)
-    
+
+
     def defineElements(self):
+        """Defines the elements that will appear on the page and adds them to the elements list"""
+
         self.createElement("title", Text(Point(self.center, 30), "Dashboard"))
 
         self.createElement("userName", Text(Point(self.center, 60), f"Hello {self.userInfo['username']}"))
@@ -20,9 +24,14 @@ class Dashboard(Page):
 
         self.createElement("logoutButton", Button(self.parent.win, Point(self.center, 200), 60, 25, "Logout", True))
 
+
     def defineClickActions(self):
+        """Defines what should happen when a button is clicked on the page"""
+
         self.clickActions.append({"button": self.logoutButton, "action": self.handleLogout})
 
+
     def handleLogout(self):
+        """Logs out the user"""
         self.parent.logout()
 
