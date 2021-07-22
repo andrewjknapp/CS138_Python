@@ -13,10 +13,12 @@
 #
 #
 # import the necessary python libraries
-
+from graphics import *
+from atmApp import ATM_App
 
 def main():
-    print("")
+    ATM_App()
+
 
 main()
 

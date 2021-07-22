@@ -1,0 +1,20 @@
+{
+    "hello123": {
+        "username": "Andrew",
+        "pin": "3425",
+        "checkingAccount": 1000,
+        "savingsAccount": 250
+    },
+    "myuserid": {
+        "username": "John",
+        "pin": "1111",
+        "checkingAccount": 2000,
+        "savingsAccount": 150
+    },
+    "id": {
+        "username": "Billy",
+        "pin": "2893",
+        "checkingAccount": 500,
+        "savingsAccount": 3000
+    }
+}
