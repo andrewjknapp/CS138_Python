@@ -1,0 +1,16 @@
+
+Searches for list with 1000 number of elements:
+    Standard Sort: 0.0001839000000000146 s
+    Selection Sort: 0.06291999999999998 s
+    Merge Sort: 0.05792999999999998 s
+    
+Searches for list with 10000 number of elements:
+    Standard Sort: 0.0015298000000000256 s
+    Selection Sort: 5.9963043 s
+    Merge Sort: 12.312850599999999 s
+    
+Searches for list with 100000 number of elements:
+    Standard Sort: 0.021511300000000233 s
+    Selection Sort: 575.7129142 s
+    Merge Sort: 496.60712060000003 s
+    
