@@ -1,0 +1,13 @@
+
+Searches for list with 1000 number of elements:"
+    Linear Search: 0.0002731000000000122 s
+    Binary Search: 4.18000000000085e-05 s
+    Binary Search was faster
+Searches for list with 10000 number of elements:"
+    Linear Search: 0.0020478000000000024 s
+    Binary Search: 2.0999999999993246e-05 s
+    Binary Search was faster
+Searches for list with 100000 number of elements:"
+    Linear Search: 0.012624300000000033 s
+    Binary Search: 1.9700000000011375e-05 s
+    Binary Search was faster
