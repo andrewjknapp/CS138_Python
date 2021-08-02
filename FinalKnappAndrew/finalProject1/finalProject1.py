@@ -5,11 +5,13 @@
 # Date:          Jul 29, 2021
 #
 #
-# Problem Statement: 
+# Problem Statement: Create an application that spell checks a text file.
 #
 #
 # Overall Plan:
-# 1.
+# File list - dashboard, button, page, WordCheckApp
+# WordCheckApp
+#   1
 #
 #
 # import the necessary python libraries
