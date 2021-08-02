@@ -2,7 +2,7 @@
 #! /usr/bin/python
 # File Name:     hw14project3.py
 # Programmer:    Andrew Knapp
-# Date:          Jul 29, 2021
+# Date:          Aug 1, 2021
 #
 #
 # Problem Statement: 
@@ -13,10 +13,12 @@
 #
 #
 # import the necessary python libraries
+from managementSystem import ManagementSystem
 
 
 def main():
-    print("")
+    ManagementSystem()
 
-main()
+if __name__ == "__main__":
+    main()
 
