@@ -72,8 +72,9 @@ class Dashboard(Page):
         
         
 
-    def isSpelledCorrectly(self, word, dictionary):
-        return self.binarySearch(word, dictionary, 0, len(dictionary)) != -1
+    def isSpelledCorrectly(self, word, list):
+        """Checks if the given word is in a list using binary search"""
+        return self.binarySearch(word, list, 0, len(list)) != -1
 
     def binarySearch(self, target, arr, lowPos, highPos):
         if lowPos > highPos:
@@ -91,7 +92,9 @@ class Dashboard(Page):
         if arr[midPos].lower() > target.lower():
             return self.binarySearch(target, arr, lowPos, midPos - 1)
 
+
     def readFile(self, fileName):
+        """Reads given file and returns a list contianing each word"""
         try:
             with open(fileName, "r") as f:
                 userFile = f.read()

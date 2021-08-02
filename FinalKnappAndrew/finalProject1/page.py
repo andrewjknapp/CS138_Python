@@ -81,6 +81,7 @@ class Page(object):
         pass
 
     def defineStyles(self, name, element):
+        """Can be overridden to define styles for any elements on page"""
         pass
 
 
