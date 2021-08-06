@@ -8,11 +8,8 @@ class Salary(Employee):
         self.monthly_salary = monthly_salary
         self.num_months_worked = num_months_worked
 
-    def add_num_classes(self, num_new_classes):
-        self.classes_taught += num_new_classes
-
-    def set_pay_per_class(self, salary):
-        self.monthly_salary = salary
-
     def calculate_pay(self):
-        return self.monthly_salary * self.classes_taught
+        return eval(self.monthly_salary) * eval(self.num_months_worked)
+
+    def toString(self):
+        return f"salary, {self.first_name}, {self.last_name}, {self.id}, {self.monthly_salary}, {self.num_months_worked}"

@@ -8,11 +8,8 @@ class PartTime(Employee):
         self.classes_taught = classes_taught
         self.pay_per_class = pay_per_class
 
-    def add_num_classes(self, num_new_classes):
-        self.classes_taught += num_new_classes
-
-    def set_pay_per_class(self, rate):
-        self.pay_per_class = rate
-
     def calculate_pay(self):
         return self.pay_per_class * self.classes_taught
+
+    def toString(self):
+        return f"parttime, {self.first_name}, {self.last_name}, {self.id}, {self.classes_taught}, {self.pay_per_class}"

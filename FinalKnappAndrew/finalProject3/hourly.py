@@ -8,11 +8,8 @@ class Hourly(Employee):
         self.hourly_rate = hourly_rate
         self.hours_worked = num_hours
 
-    def add_hours(self, num_hours):
-        self.hours_worked += num_hours
-
-    def set_hourly_rate(self, rate):
-        self.hourly_rate = rate
-
     def calculate_pay(self):
         return self.hourly_rate * self.hours_worked
+
+    def toString(self):
+        return f"hourly, {self.first_name}, {self.last_name}, {self.id}, {self.hourly_rate}, {self.hours_worked}"

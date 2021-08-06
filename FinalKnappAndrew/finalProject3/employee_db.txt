@@ -1,0 +1,3 @@
+salary, John, Doe, 1, 2, 3000
+salary, Bill, Bob, 2, 20, 80
+salary, Jill, James, 3, 1200, 8
